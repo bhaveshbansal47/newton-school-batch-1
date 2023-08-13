@@ -1,0 +1,37 @@
+#about-me-section {
+  display: flex;
+  background-color: white;
+  padding-left: 144px;
+  padding-right: 144px;
+  padding-top: 58px;
+  padding-bottom: 58px;
+  gap: 87px;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-me-section-image {
+  width: 500px;
+  height: 500px;
+}
+
+#about-me-heading {
+  margin: 0;
+  margin-bottom: 15px;
+  color: #457b9d;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#about-me-subheading {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 48px;
+}
+
+#about-me-description {
+  color: #455a64;
+  text-align: justify;
+  width: 564px;
+  font-size: 20px;
+}
