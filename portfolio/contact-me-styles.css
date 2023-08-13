@@ -1,0 +1,37 @@
+#contact-me-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 47px;
+    padding-bottom: 36px;
+    padding-left: 145px;
+}
+
+#contact-me-heading {
+    margin: 0;
+    color: #457B9D;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 11px;
+}
+
+#contact-me-subheading {
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 11px;
+}
+
+#email {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+#profile-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 81px;
+}
+
+#copyright {
+    font-size: 20px;
+}
