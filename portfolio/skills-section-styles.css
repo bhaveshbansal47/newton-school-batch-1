@@ -1,0 +1,26 @@
+#skills-section {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  align-items: center;
+  flex-direction: column;
+  gap: 26px;
+}
+
+#skills-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#skills-heading {
+  color: #457b9d;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+#skills-subheading {
+  font-size: 48px;
+  margin: 0;
+}
