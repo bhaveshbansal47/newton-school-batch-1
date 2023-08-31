@@ -1,18 +1,19 @@
 function calcTotal() {
     // my code will execute here only
     const priceNodes = fetchPriceNodes() //step 2
+    console.log(priceNodes)
     const totalPrice = sumOfAllPriceNodes(priceNodes) //step3
-    if(checkGrandTotalExists()) {
+    if (!checkGrandTotalExists()) {
         const grandTotalRow = createGrandTotalRow(totalPrice)
         appendGrandTotalRowToTable(grandTotalRow)
     } else {
         // update the row
-
+        updateGrandTotalRow(totalPrice)
     }
 }
 
 function fetchPriceNodes() {
-    const selector = '[data-ns-test]'
+    const selector = '[data-ns-test="price"]'
     const nodes = document.querySelectorAll(selector)
     // array of price nodes and length of this array as
     // per example will be 4
@@ -21,7 +22,7 @@ function fetchPriceNodes() {
 
 function sumOfAllPriceNodes(nodes) {
     let sum = 0
-    for(let i = 0; i < nodes.length; i++) {
+    for (let i = 0; i < nodes.length; i++) {
         const priceText = nodes[i].innerText // price in string
         const price = Number(priceText) //price in number
         sum += price
@@ -48,12 +49,18 @@ function appendGrandTotalRowToTable(grandTotalRow) {
 }
 
 function updateGrandTotalRow(totalPrice) {
-    
+    const selector = '[data-ns-test="grandTotal"]'
+    const grandTotalNode = document.querySelector(selector)
+    grandTotalNode.innerText = totalPrice
 }
 
 // way to write neat clean code
 function checkGrandTotalExists() {
     const selector = '[data-ns-test="grandTotal"]'
     const grandTotalNode = document.querySelector(selector)
-    return grandTotalNode !== undefined
+    if(grandTotalNode !== null) {
+        true
+    } else {
+        return false
+    }
 }
