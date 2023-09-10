@@ -1,5 +1,6 @@
 const actualWord = "actor"
 const letterNodes = document.getElementsByClassName('letter')
+// letterNodes is an object with numerical values as the key
 let currentPosition = 0
 let guesses = 5
 
