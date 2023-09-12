@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="body">
+    <div style="width: 200px; height: 200px; background-color: red" id="parent">
+      <button id="button" style="position: absolute">click me</button>
+    </div>
+    <script>
+      document.getElementById("body").addEventListener(
+        "click",
+        function (event) {
+          console.log("body clicked");
+        },
+        {
+          capture: true,
+        }
+      );
+      document.getElementById("parent").addEventListener("click", parent, {
+        capture: true,
+      });
+      function parent(event) {
+        // event.stopPropagation();
+        console.log("parent clicked");
+      }
+      document.getElementById("button").addEventListener("click", child, {
+        capture: true,
+      });
+      function child(event) {
+        // event.stopPropagation();
+        console.log("child clicked");
+      }
+    </script>
+  </body>
+</html>
