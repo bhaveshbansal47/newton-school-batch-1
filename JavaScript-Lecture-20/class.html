@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //     class student {
+      //         name = "bhavesh" // name: "bhavesh"
+      //         rollNumber = 12
+      //     }
+      //   class Error {
+      //     constructor(name, description) {
+      //         // console.log(name)
+      //         // console.log(description)
+      //       this.name = name;
+      //       this.description = description;
+      //     //   console.log('construtor executed')
+      //     }
+      //     printError = function() {
+      //         console.log(this.description)
+      //     }
+      //   }
+      //   const error1 = new Error("variable undefined", "not defined"); // creating new instance
+      //   const error2 = new Error("404 not found", "not found");
+      //   const error3 = new Error("abcd", "any body can dance");
+      //   error1.printError()
+
+      class Robot {
+        constructor(name, phrase) {
+          this.name = name;
+          this.sayPhrase = function () {
+            console.log(phrase);
+          };
+        }
+        species = "robot";
+        transform = function () {
+          console.log("optimus prime");
+        };
+      }
+      const robot1 = new Robot("Tito", "I can cook");
+      const robot2 = new Robot("Terminator", "Abrakadabra");
+      console.log(robot2.species)
+    // robot2.transform()
+    </script>
+  </body>
+</html>
