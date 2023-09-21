@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // class GrandParent {
+        //     printBinary() {
+        //         console.log("010000100101001")
+        //     }
+        // }
+
+        // class Parent extends GrandParent {
+        //     developProgram = function() {
+        //         console.log("i am developing a program")
+        //     }
+        // }
+
+        // class Child extends Parent  {
+        //     useAi = function() {
+        //         console.log('i am using AI')
+        //     }
+        // }
+
+        // const child = new Child()
+        // child.printBinary()
+        // child.developProgram()
+        // child.useAi()
+
+        // class GrandParent {
+        //     constructor(binaryNumber) {
+        //         console.log(binaryNumber)
+        //     }
+        //     printBinary() {
+        //         console.log("010000100101001")
+        //     }
+        // }
+
+        // class Parent extends GrandParent {
+        //     constructor(codeName, binaryNumber) {
+        //         console.log(codeName)
+        //         super(binaryNumber)
+        //     }
+        //     developProgram = function() {
+        //         console.log("i am developing a program")
+        //     }
+        // }
+
+        // class Child extends Parent  {
+            
+        //     constructor(aiName, codeName, binaryNumber) {
+        //         console.log(aiName)
+        //         super(codeName, binaryNumber)
+                
+        //     }
+            
+        //     useAi = function() {
+        //         console.log('i am using AI')
+        //     }
+        // }
+
+        // const child = new Child("chatgpt", "binary search", "010101010100101")
+        class Parent {
+            #privateProgram = function() {
+                console.log("Don't touch it")
+            }
+            developProgram = function() {
+                console.log("i am developing a program")
+                this.#privateProgram()
+            }
+        }
+        class Child extends Parent  {
+           
+            
+            useAi = function() {
+                console.log('i am using AI')
+            }
+        }
+
+        // const parent = new Parent()
+        // parent.#privateProgram()
+        const child = new Child()
+        // child.#privateProgram()
+        child.developProgram()
+    </script>
+</body>
+</html>
