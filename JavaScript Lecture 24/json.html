@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const arr = [1,2,3]
+      // console.log(typeof JSON.stringify(arr))
+      const obj = {
+        name: "bhavesh",
+        role: "instructor",
+      };
+      // const strObj = JSON.stringify(obj)
+      // localStorage.setItem("bhavesh", obj)
+      // console.log(localStorage.getItem("bhavesh"))
+
+      localStorage.setItem("student", JSON.stringify(obj));
+      console.log(JSON.parse(localStorage.getItem("student")));
+    </script>
+  </body>
+</html>
