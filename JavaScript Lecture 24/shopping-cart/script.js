@@ -223,32 +223,33 @@ class Product {
         this.title = title
         this.price = price
         this.image = image
-     }
+    }
 }
 
 //4
+localStorage.setItem('products', JSON.stringify([]))
 class Storage {
-    getproducts = function () {
+    static getproducts = function () {
         const productsInString = localStorage.getItem("products");
         return JSON.parse(productsInString);
     };
-    addtolocalstorage = function (product) { // {id: 3, title: "trouser"}
-        const products = this.getproducts() // produts array
+    static addtolocalstorage = function (product) { // {id: 3, title: "trouser"}
+        const products = Storage.getproducts()
         products.push(product) // push new product in aray
         localStorage.setItem("products", JSON.stringify(products))
-    }
-    removeproduct = function(id) {
-        const products = this.getproducts() // products array
+    };
+    static removeproduct = function (id) {
+        const products = Storage.getproducts()
         const newProducts = [...products] // copy array
-        for(let i = 0; i<products.length; i++) {
+        for (let i = 0; i < products.length; i++) {
             const product = products[i]
-            if(product.id === id) {
-                newProducts.splice(i,1)
+            if (product.id === id) {
+                newProducts.splice(i, 1)
                 break
             }
         }
         localStorage.setItem("products", JSON.stringify(newProducts))
-    }
+    };
 }
 
 //sticky header
