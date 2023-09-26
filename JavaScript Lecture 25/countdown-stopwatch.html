@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        class Obj {
+          constructor() {
+            this.duration = 0; // duration time in ms
+            this.start = function () {
+              this.timer = setInterval(() => {
+                this.duration += 1;
+                // console.log(this.duration)
+              }, 1);
+            };
+
+            this.stop = function () {
+                console.log(this.duration)
+              clearInterval(this.timer);
+            };
+
+            this.reset = function () {
+              clearInterval(this.timer);
+              this.duration = 0;
+            };
+          }
+        }
+
+        const obj = new Obj()
+        obj.start()
+
+        setTimeout(function() {
+            obj.stop()
+        }, 2000)
+    </script>
+  </body>
+</html>

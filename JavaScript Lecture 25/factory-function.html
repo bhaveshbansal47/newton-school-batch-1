@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // this is factory function
+      function factory(name, role) {
+        let obj = {
+          name: name,
+          role: role,
+        }
+        return obj;
+      }
+
+      console.log(factory("bhavesh", "instructor"));
+
+      // constructor is also known as factory
+      // it get called every time we create an instance and it act as the
+      // filler of the object created by Class/instance
+
+      class Student {
+        // factory function with assumption
+        constructor(name, role) {
+          // filler
+          this.name = name;
+          this.role = role;
+        }
+      }
+
+      console.log(new Student("bhavesh", "instructor"));
+      // new object will created as soon as you create new instance
+      // which will be filled by constructor immediately
+    </script>
+  </body>
+</html>

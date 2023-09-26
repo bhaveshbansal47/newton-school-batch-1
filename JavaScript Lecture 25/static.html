@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student {
+            static role = "instructor" // this must be static to get called in static method
+            static hello = function() {
+                console.log("hello", Student.role)
+            }
+        }
+
+        const student1 = new Student() //instance of student class
+        // console.log(student1)
+        // student1.hello()
+        Student.hello()
+    </script>
+</body>
+</html>
