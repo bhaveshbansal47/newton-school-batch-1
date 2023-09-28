@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const timer = setTimeout(function() {
+        //     console.log("hello")
+        // }, 5000)
+        // clearTimeout(timer)
+        const bomb = setTimeout(function() {
+            console.log('boom💥💥💥💥')
+        }, 10000)
+
+        setTimeout(function() {
+            clearTimeout(bomb)
+            console.log('bomb successfully difused🫡')
+        }, 9500)
+
+        
+    </script>
+</body>
+</html>
