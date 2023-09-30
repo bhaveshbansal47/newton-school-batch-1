@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Your code here
+      function Employee(name, yearOfJoin, location) {
+        this.name = name;
+        this.yearOfJoin = yearOfJoin;
+        this.location = location;
+        this.getEmployeeDetails = function () {
+          return `Name: ${this.name}, Year of Join: ${this.yearOfJoin}, Location: ${this.location}`;
+        };
+        this["#salary"];
+        this.setSalary = function (amount) {
+          this["#salary"] = amount;
+        };
+        this.getSalary = function () {
+          return this["#salary"];
+        };
+      }
+    </script>
+  </body>
+</html>
