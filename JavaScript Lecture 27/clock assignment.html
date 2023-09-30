@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function StopWatch() {
+        let startTime;
+        let clockRunning = false;
+        this.duration = 0;
+        this.start = function () {
+          if (clockRunning) {
+            return "Stopwatch is already running";
+          }
+          startTime = new Date();
+          clockRunning = true;
+          return this.duration;
+        };
+        this.stop = function () {
+          if (!clockRunning) {
+            return "Stopwatch is not started";
+          }
+          const currentTime = new Date();
+          const timeDiffernceinMs = currentTime - startTime;
+          this.duration += timeDiffernceinMs;
+          clockRunning = false;
+          return this.duration;
+        };
+        this.reset = function () {
+          this.duration = 0;
+          startTime = undefined;
+          clockRunning = false;
+          return this.duration;
+        };
+      }
+    </script>
+  </body>
+</html>
