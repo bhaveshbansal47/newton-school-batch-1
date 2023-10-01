@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3];
+      // arr.forEach(function(val,index,array) {
+      //     console.log(val,index,array)
+      // })
+      // function callBack(val,index,array) {
+      //     console.log(val,index,array)
+      // }
+
+      // for(let i = 0; i < arr.length; i++) {
+      //     callBack(arr[i], i, arr)
+      // }
+
+      // arr.reduce(function(returnValue,actualValue,index,array) {
+      //     console.log(returnValue,actualValue,index,array)
+      //     return returnValue + actualValue
+      // },0)
+
+      // internal implementation of reduce
+      const initialValue = 0
+      function callBack(returnValue, actualValue, index, array) {
+        console.log(returnValue, actualValue, index, array);
+        return returnValue + actualValue;
+      }
+      let returnedValue = initialValue;
+      for (let i = 0; i < array.length; i++) {
+        actualValue = array[i];
+        returnedValue = callback(returnedValue, actualValue, i, array);
+      }
+      console.log(returnedValue);
+    </script>
+  </body>
+</html>
