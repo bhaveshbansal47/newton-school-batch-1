@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name, type) {
+            this.name = name
+            this.type = type
+        }
+      }
+
+      Animal.prototype.sayHi = function () {
+        console.log("hello")
+      }
+
+      class Bird extends Animal {
+        
+      }
+
+      Bird.prototype.sayBye = function() {
+        console.log("bye")
+      }
+
+      const pigeon = new Bird()
+
+      const lion = new Animal("lion", "carnivore")
+
+      lion.sayHi()
+
+      pigeon.sayHi()
+    
+
+
+    //   const arr = new Array(1,2,3) // [1,2,3]
+    //   console.log(arr)
+    </script>
+  </body>
+</html>

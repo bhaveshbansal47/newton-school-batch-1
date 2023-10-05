@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class One {
+        //     // prototype = {
+        //     //     1: "one"
+        //     // }
+        // }
+
+        // One.prototype[1] = "One"
+
+        // class Two extends One {
+        //     // instance Member
+        //     // prototype = {
+        //     //     2: "Two"
+        //     // }
+        // }
+
+        // // prototype member
+        // Two.prototype[2]= "Two"
+
+        // const two = new Two()
+        // console.log(two[1], two[2])
+
+
+        // class Person {
+        //     constructor(name) {
+        //         this.name = name
+        //     }
+        //     planet = "earth"
+        // }
+      
+        // const p1 = new Person("bhavesh")
+        // const p2 = new Person("Mustafa")
+        // const p3 = new Person("Utkarsh")
+        // const p4 = new Person("Gajendra")
+
+        // console.log(p1.planet)
+        // console.log(p2.planet)
+        // console.log(p3.planet)
+        // console.log(p4.planet)
+
+        // // 4 lines
+        // p1.planet = "moon"
+        // p2.planet = "moon"
+        // p3.planet = "moon"
+        // p4.planet = "moon"
+
+        // console.log(p1.planet)
+        // console.log(p2.planet)
+        // console.log(p3.planet)
+        // console.log(p4.planet)
+
+        class Person {
+            constructor(name) {
+                this.name = name
+            }
+        }
+
+        Person.prototype.planet = "earth"
+
+        const p1 = new Person("bhavesh")
+        const p2 = new Person("Mustafa")
+        const p3 = new Person("Utkarsh")
+
+        const p4 = new Person("Gajendra")
+
+        console.log(p1.planet)
+        console.log(p2.planet)
+        console.log(p3.planet)
+        console.log(p4.planet)
+
+        // 1 line
+        Person.prototype.planet = "moon"
+
+        console.log(p1.planet)
+        console.log(p2.planet)
+        console.log(p3.planet)
+        console.log(p4.planet)
+    </script>
+</body>
+</html>
