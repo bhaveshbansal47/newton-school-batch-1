@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(name) {
+                this.name = name
+            }
+        }
+
+        Animal.prototype.sayMyLine = () => {
+            console.log('i am an animal')
+        }
+
+        class Bird extends Animal {
+            constructor(name) {
+                super(name)
+                this.name = name
+            }
+        }
+
+        Bird.prototype.doThevoice = () => {
+            console.log('qwak qwak')
+        }
+
+        const sparrow = new Bird('sparrow')
+        sparrow.doThevoice(), sparrow.sayMyLine()
+    </script>
+</body>
+</html>

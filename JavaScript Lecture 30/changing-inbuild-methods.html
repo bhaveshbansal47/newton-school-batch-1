@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array.prototype.map = function() {
+        //     console.log("Ja na be kisi aur se krwa")
+        // }
+        // const arr = new Array() //[]
+        // arr.map()
+
+        // const arr2 = []
+        // arr2.map()
+
+        Array.prototype.jodBatao = function() {
+            // console.log(" i will sum it")
+            // console.log(this)
+            const arr = [...this]
+            let sum = 0;
+            for(let ele of arr) {
+                sum += ele
+            }
+            console.log(sum)
+        }
+
+       const arr = [2,5,4,3]
+       arr.jodBatao()
+       const arr2 = [434,3,23,21,3,123,12,3,123,123,12,3,123]
+       arr2.jodBatao()
+    </script>
+</body>
+</html>
