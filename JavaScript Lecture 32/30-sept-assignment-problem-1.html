@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // class Admin {
+      //     say = function() {
+      //         console.log(this.name)
+      //     }
+      // }
+
+      // class User extends Admin {
+      class User {
+        constructor(name) {
+          // super()
+          this.name = name;
+        }
+      }
+
+      // User.prototype.say = function() {
+      //     console.log(this.name)
+      // }
+
+      //   const sayMixin = {
+      //     say: function (name) {
+      //       console.log(name);
+      //     },
+      //   };
+
+      function print(name) {
+        console.log(name);
+      }
+
+      //   const sayHiMixin = {
+      //     say: () => {
+      //         const name = this.name
+      //         console.log(name) // print(name)
+
+      //         // ghatiya(name)
+      //     },
+      //     // say: sayMixin.say
+      //   };
+
+      const sayMixin = {
+        say: function (name) {
+          console.log(name);
+        },
+      };
+
+      const sayHiMixin = {
+        say: () => {
+          //   console.log(this.name); // print(this.name)
+          sayMixin.say(this.name);
+        },
+      };
+
+      User.prototype.say = sayHiMixin.say;
+
+      const u1 = new User("Bhavesh");
+      u1.say();
+    </script>
+  </body>
+</html>

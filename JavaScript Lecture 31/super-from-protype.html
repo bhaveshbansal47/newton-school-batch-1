@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class StudentProcess {
+        
+      }
+
+      StudentProcess.prototype.sayMyName = function () {
+          console.log("Your name");
+        };
+
+      class Student extends StudentProcess {
+        constructor(name) {
+          super();
+          super.sayMyName()
+          this.name = name;
+        }
+
+    
+      }
+
+      const s1 = new Student("bhavesh");
+    
+    </script>
+  </body>
+</html>
