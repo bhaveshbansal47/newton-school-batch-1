@@ -29,26 +29,30 @@
         }
 
         method = "GET";
-        isSecure = function () {
+        isSecure  () {
           return this.#secure;
         };
-        updateUrl = function (newUrl) {
+        updateUrl (newUrl) {
           this.url = newUrl;
           this.#secure = newUrl.startsWith("https");
         };
       }
 
-      const s = new API("http://api.com/api/hello");
-      console.log(s.isSecure()); // false
+      const api1 = new API("https")
+      console.log(api1)
 
-      s.updateUrl("https://api. com/api/hello");
-      console.log(s.isSecure()); // true
+    //   const s = new API("http://api.com/api/hello");
+    //   console.log(s.isSecure()); // false
 
-      console.log(s.url); // https://api. com/api/hello
+    //   console.log(Object.keys(s).length)
+    //   s.updateUrl("https://api. com/api/hello");
+    //   console.log(s.isSecure()); // true
 
-      console.log(s.method); // GET
+    //   console.log(s.url); // https://api. com/api/hello
 
-      console.log(s.secure); // undefined (because private field)
+    //   console.log(s.method); // GET
+
+    //   console.log(s.secure); // undefined (because private field)
     </script>
   </body>
 </html>
