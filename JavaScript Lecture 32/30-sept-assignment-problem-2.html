@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   class Animal {
+      //     constructor(name, lifespan) {
+      //       this.name = name;
+      //       this.lifespan = lifespan;
+      //     }
+      //   }
+
+      //   console.log(Animal.prototype.constructor)
+
+      function Animal(name, lifespan) {
+        this.name = name;
+        this.lifespan = lifespan;
+      }
+      console.log(Animal.prototype.constructor);
+
+      function Reptile() {
+        this.layEggs = function layEggs() {
+          console.log("Reptile laid eggs.");
+        };
+      }
+
+      console.log(Reptile.prototype.constructor);
+
+      Animal.prototype = Reptile.prototype;
+    //   Object.assign(Reptile.prototype, {})
+
+      console.log(Reptile.prototype.constructor);
+
+      //   class Reptile extends Animal {
+      //     constructor() {
+      //       this.layEggs = function layEggs() {
+      //         console.log("Reptile laid eggs.");
+      //       };
+      //     }
+      //   }
+    </script>
+  </body>
+</html>

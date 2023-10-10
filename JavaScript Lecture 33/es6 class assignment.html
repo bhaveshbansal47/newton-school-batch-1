@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // class API {
+      //     constructor(url) {
+      //         this.url = url
+      //     }
+      //     updateUrl = function(newUrl) {
+      //         this.url = newUrl
+      //     }
+      // }
+
+      // const api1 = new API("https://google.com")
+      // // api1.url = "https://facebook.com"
+      // api1.updateUrl("https://facebook.com")
+      // console.log(api1.url)
+
+      class API {
+        #secure;
+        constructor(url) {
+          this.url = url;
+          this.#secure = url.startsWith("https");
+        }
+
+        method = "GET";
+        isSecure = function () {
+          return this.#secure;
+        };
+        updateUrl = function (newUrl) {
+          this.url = newUrl;
+          this.#secure = newUrl.startsWith("https");
+        };
+      }
+
+      const s = new API("http://api.com/api/hello");
+      console.log(s.isSecure()); // false
+
+      s.updateUrl("https://api. com/api/hello");
+      console.log(s.isSecure()); // true
+
+      console.log(s.url); // https://api. com/api/hello
+
+      console.log(s.method); // GET
+
+      console.log(s.secure); // undefined (because private field)
+    </script>
+  </body>
+</html>
