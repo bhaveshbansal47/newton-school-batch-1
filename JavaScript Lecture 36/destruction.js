@@ -52,3 +52,21 @@
 // let [[a,b], c] = [[1],2]
 
 // console.log(a,b,c)
+
+let {
+  name: a,
+  marks: [b,c,d],
+  subjects: {
+    english: e,
+    math: f
+  } 
+} = {
+    name: "Kush",
+    marks: [1, 2, 3],
+    subjects: {
+        english: 30,
+        math: 40
+    }
+}
+
+console.log(a,b,c,d,e,f)
