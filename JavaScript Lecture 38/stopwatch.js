@@ -50,6 +50,7 @@ function stop() {
     pauseContinueButton.setAttribute('disabled', true)
     stopButton.setAttribute('disabled', true)
     startButton.removeAttribute('disabled')
+    pauseContinueButton.innerText = "pause"
 }
 
 
